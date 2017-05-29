@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SkyBooks.jnlp">
+  <information>
+    <title>SkyBooks</title>
+    <vendor>SkyEpub</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  <shortcut><desktop/></shortcut>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SkyBooks.jar" size="5979077" download="eager" />
+    <jar href="lib/commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="lib/commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib/controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib/fluent-hc-4.5.jar" size="31270" download="eager" />
+    <jar href="lib/httpclient-4.5.jar" size="727567" download="eager" />
+    <jar href="lib/httpclient-cache-4.5.jar" size="158975" download="eager" />
+    <jar href="lib/httpclient-win-4.5.jar" size="17359" download="eager" />
+    <jar href="lib/httpcore-4.4.1.jar" size="322234" download="eager" />
+    <jar href="lib/httpmime-4.5.jar" size="40692" download="eager" />
+    <jar href="lib/jettison-1.1.jar" size="67758" download="eager" />
+    <jar href="lib/jna-4.1.0.jar" size="914597" download="eager" />
+    <jar href="lib/jna-platform-4.1.0.jar" size="1464423" download="eager" />
+    <jar href="lib/skydesktop.jar" size="267543" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.8.11.2.jar" size="5575351" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SkyBooks" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="skybooks.SkyBooks"  name="SkyBooks" />
+  <update check="always"/>
+</jnlp>

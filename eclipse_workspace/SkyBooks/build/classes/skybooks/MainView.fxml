@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import org.controlsfx.control.GridView?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="skybooks.MainViewController">
+    <stylesheets>
+        <URL value="@mainview.css" />
+    </stylesheets>
+   <children>
+      <HBox fx:id="topBar" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #eeeeee,#dadada);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="topPane" prefHeight="40.0" prefWidth="345.0" style="-fx-background-color: transparent;" stylesheets="@../resources/SearchField.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="libraryButton" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="42.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <ImageView fx:id="libraryImageView" fitHeight="27.0" fitWidth="27.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/library.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="sideButton" layoutX="61.0" layoutY="1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fx:id="sideImageView" fitHeight="32.0" fitWidth="32.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/sidebar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="viewButton" layoutX="113.0" layoutY="3.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="38.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fx:id="viewImageView" fitHeight="24.0" fitWidth="24.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/gridview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="switchPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="352.0" style="-fx-background-color: transparent;" />
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="346.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="searchField" layoutX="5.0" layoutY="8.0" prefHeight="27.0" prefWidth="177.0" style="-fx-background-radius: 10;" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="8.0">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="clearButton" layoutX="125.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="145.0">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="17.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="303.0">
+                     <image>
+                        <Image url="@../resources/search_small.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="reloadButton" layoutX="204.0" layoutY="3.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="4.0">
+                     <graphic>
+                        <ImageView fx:id="reloadImageView" fitHeight="21.0" fitWidth="21.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/reload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logButton" layoutX="246.0" layoutY="3.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="3.0">
+                     <graphic>
+                        <ImageView fx:id="logImageView" fitHeight="20.0" fitWidth="20.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="settingButton" layoutX="351.0" layoutY="3.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-insets: 0,0,0; -fx-background-color: transparent;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+                     <graphic>
+                        <ImageView fx:id="settingImageView" fitHeight="26.0" fitWidth="26.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/Settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <SplitPane fx:id="splitPane" dividerPositions="0.17572815533980582" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <items>
+            <ListView fx:id="categoryListView" prefHeight="662.0" prefWidth="313.0">
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </ListView>
+            <StackPane fx:id="viewStackPane" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" />
+                  <GridView fx:id="gridView" prefHeight="661.0" prefWidth="1007.0" style="-fx-background-color: white;" />
+               </children>
+            </StackPane>
+        </items>
+      </SplitPane>
+      <Pane prefHeight="25.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="statusLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="1.0" text="231 Books (15 Downloaded)" textAlignment="JUSTIFY" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

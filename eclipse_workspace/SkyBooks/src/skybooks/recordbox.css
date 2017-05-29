@@ -1,0 +1,37 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    .list-view:focused {
+        -fx-background-color: red /* or transparent or other preferred color */,-fx-box-border,-fx-control-inner-background;
+        -fx-background-insets: -1.4, 0, 1;
+        -fx-background-radius: 1.4, 0, 0;
+        /*....*/
+        -fx-padding: 1; /* 0.083333em; */
+    }
+    
+    .button:focused {
+        -fx-background-color:  linear-gradient(#9a9aff, #0000ff); 
+        -fx-background-insets: 0, 1, 2;
+        -fx-background-radius: 5, 4, 3;
+        -fx-text-fill:white;
+    }
+    
+    .button {
+        -fx-background-color:   linear-gradient(#fafafa, #cacaca); 
+        -fx-background-insets: 0, 1, 2;
+        -fx-background-radius: 5, 4, 3;
+        -fx-text-fill:black;
+    }
+    
+    .list-view .scroll-bar:horizontal .increment-arrow,
+    .list-view .scroll-bar:horizontal .decrement-arrow,
+    .list-view .scroll-bar:horizontal .increment-button,
+    .list-view .scroll-bar:horizontal .decrement-button {
+        -fx-padding:0;
+    }
+    
+
+
+}

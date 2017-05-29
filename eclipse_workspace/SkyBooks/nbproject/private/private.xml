@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="27">
+        <file>
+            <url>src/skybooks/FXMLBookController.java</url>
+            <bookmark id="8">
+                <name/>
+                <line>221</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/skydesktop/ReflowableControl.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>2419</line>
+                <key/>
+            </bookmark>
+            <bookmark id="3">
+                <name/>
+                <line>2949</line>
+                <key/>
+            </bookmark>
+            <bookmark id="4">
+                <name/>
+                <line>3310</line>
+                <key/>
+            </bookmark>
+            <bookmark id="5">
+                <name/>
+                <line>3315</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="SkyDesktop">
+            <file>file:/Users/skytree/NetBeansProjects/SkyBooks/src/skybooks/SkyBooks.java</file>
+        </group>
+    </open-files>
+</project-private>
