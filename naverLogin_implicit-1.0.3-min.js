@@ -41,11 +41,11 @@ naver_id_login.innerHTML="";naver_id_login_contents="";naver_id_login_url=this.g
 naver_id_popup_option="";if(this.popup)
 {naver_id_popup_option=" onClick=\"window.open(this.href, 'naverloginpop', 'titlebar=1, resizable=1, scrollbars=yes, width=600, height=550'); return false\" ";}
 if(this.button_type==BUTTON_TYPE)
-{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='//:0' border='0' title='네이버 아이디로 로그인' width='"+this.button_height+"' height='"+this.button_height+"'></a> ";}
+{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='' border='0' title='네이버 아이디로 로그인' width='"+this.button_height+"' height='"+this.button_height+"'></a> ";}
 else if(this.button_type==BANNER_SMALL_TYPE)
-{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='//:0' border='0' title='네이버 아이디로 로그인' width='"+(this.button_height*656/250)+"px' height='"+this.button_height+"'></a> ";}
+{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='' border='0' title='네이버 아이디로 로그인' width='"+(this.button_height*656/250)+"px' height='"+this.button_height+"'></a> ";}
 else
-{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='//:0' border='0' title='네이버 아이디로 로그인' width='"+(this.button_height*185/40)+"px' height='"+this.button_height+"px'></a> ";}
+{naver_id_login_contents="<a href='"+naver_id_login_url+"' "+naver_id_popup_option+" id='naver_id_login_anchor'><img src='' border='0' title='네이버 아이디로 로그인' width='"+(this.button_height*185/40)+"px' height='"+this.button_height+"px'></a> ";}
 naver_id_login.innerHTML=naver_id_login_contents;if(this.is_callback)
 {this.init_naver_id_login_callback();}}
 this.checkStateStore=function(receive_state)
