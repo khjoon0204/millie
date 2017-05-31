@@ -52,8 +52,8 @@
 		  success: function(res) {
 			//alert(JSON.stringify(res));
 			
-			if(!millie){ alert("millie not loaded!"); return; }
-			else{ alert(millie); }
+			if(typeof window.millie == 'undefined'){ alert("millie not loaded!"); return; }
+			else{ alert(window.millie); }
 			
   			setTimeout(function(){ window.millie.closeStage(); }, 3000);
   			
