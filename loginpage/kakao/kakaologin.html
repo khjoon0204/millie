@@ -33,19 +33,24 @@
     });
     */
     
-    function loginWithKakao() {
+    function loginWithKakao(callback) {
 
       // 로그인 창을 띄웁니다.
       Kakao.Auth.login({
         success: function(authObj) {
           alert('Kakao.Auth.login success!');
-          callAPI(callAPICallback);
+          //callAPI(callAPICallback);
+          callback(authObj);
         },
         fail: function(err) {
           alert(JSON.stringify(err));
         }
       });
     };
+    
+    function loginWithKakaoCallback(authObj){
+    	alert("loginWithKakaoCallback! millie = "+millie);
+    }
     
     function callAPICallback(res){
     	alert("callAPICallback! millie = "+millie);
@@ -73,7 +78,7 @@
     
     // 자동 실행
     //document.getElementById('kakao-login-btn').click();
-    loginWithKakao();	
+    loginWithKakao(loginWithKakaoCallback);	
     
   //]]>
 </script>
