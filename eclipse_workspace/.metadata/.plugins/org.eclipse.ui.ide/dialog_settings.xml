@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-		<item value="/Users/haejoonkim/millie/eclipse_workspace/SkyBooks"/>
-		<item value="/Users/haejoonkim/millie/SkyBooks"/>
-	</list>
-	<section name="ExternalProjectImportWizard">
-	</section>
-</section>

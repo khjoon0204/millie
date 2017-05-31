@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 6 elements from project &apos;SkyBooks&apos;&#x0A;- Original project: &apos;SkyBooks&apos;&#x0A;- Original elements:&#x0A;     hs_err_pid14982.log&#x0A;     hs_err_pid15008.log&#x0A;     hs_err_pid15019.log&#x0A;     hs_err_pid20504.log&#x0A;     hs_err_pid34387.log&#x0A;     hs_err_pid36677.log" description="Delete elements" element1="hs_err_pid15019.log" element2="hs_err_pid34387.log" element3="hs_err_pid15008.log" element4="hs_err_pid14982.log" element5="hs_err_pid20504.log" element6="hs_err_pid36677.log" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="6" stamp="1495778870048" subPackages="false" version="1.0"/>
-</session>
