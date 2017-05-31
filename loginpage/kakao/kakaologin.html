@@ -16,9 +16,11 @@
     // 사용할 앱의 JavaScript 키를 설정해 주세요.
     Kakao.init('61d2883c5142c189c0688dcba9c21b0b');
     function loginWithKakao() {
+	  
       // 로그인 창을 띄웁니다.
       Kakao.Auth.login({
         success: function(authObj) {
+          alert('Kakao.Auth.login success!');
           // 로그인 성공시, API를 호출합니다.
 			Kakao.API.request({
 			  url: '/v1/user/me',
