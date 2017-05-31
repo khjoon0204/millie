@@ -33,12 +33,13 @@
     
     function loginWithKakao(callback) {
 
-		window.location="myapp://callJavaFXFromJavascript";
 
       // 로그인 창을 띄웁니다.
       Kakao.Auth.login({
         success: function(authObj) {
           alert('Kakao.Auth.login success!');
+          
+		window.location="myapp://authLoginSuccess";
 
           //callAPI(callAPICallback);
           callback(authObj);
