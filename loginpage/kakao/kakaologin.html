@@ -17,7 +17,6 @@
     // 사용할 앱의 JavaScript 키를 설정해 주세요.
     Kakao.init('61d2883c5142c189c0688dcba9c21b0b');
     
-    var keep = "he is always";    
     var mil;                           
     
     /*
@@ -36,14 +35,13 @@
     
     function loginWithKakao(callback) {
 
-		mil = millie;
-
+		alert(millie);
 
       // 로그인 창을 띄웁니다.
       Kakao.Auth.login({
         success: function(authObj) {
           alert('Kakao.Auth.login success!');
-          alert(mil);
+          
           
           //callAPI(callAPICallback);
           callback(authObj);
@@ -61,7 +59,6 @@
     
     function callAPI(callback){
     	
-    	alert('is he there? ' + keep);
     	// 로그인 성공시, API를 호출합니다.
 		Kakao.API.request({
 		  url: '/v1/user/me',
@@ -86,7 +83,8 @@
     
     // 자동 실행
     //document.getElementById('kakao-login-btn').click();
-    loginWithKakao(loginWithKakaoCallback);	
+    setTimeout(function(){ loginWithKakao(loginWithKakaoCallback); }, 2000);
+    	
     
   //]]>
 </script>
