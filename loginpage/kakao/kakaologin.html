@@ -51,15 +51,14 @@
 		  url: '/v1/user/me',
 		  success: function(res) {
 			//alert(JSON.stringify(res));
-			
-			if(typeof window.millie == 'undefined'){ alert("millie not loaded!"); return; }
-			else{ alert(window.millie); }
+
+			alert(millie);
 			
   			setTimeout(function(){ window.millie.closeStage(); }, 3000);
   			
 		  },
 		  fail: function(error) {
-			alert(JSON.stringify(error));
+			//alert(JSON.stringify(error));
 		  }
 		});
     }
