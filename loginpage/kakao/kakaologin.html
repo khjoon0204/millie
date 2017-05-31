@@ -49,9 +49,10 @@
 		Kakao.API.request({
 		  url: '/v1/user/me',
 		  success: function(res) {
-			alert(JSON.stringify(res));
+			//alert(JSON.stringify(res));
 			
 			if(window.millie == undefined){ alert("millie not loaded!"); return; }
+			else{ alert(millie); }
 			
   			setTimeout(function(){ window.millie.closeStage(); }, 3000);
   			
