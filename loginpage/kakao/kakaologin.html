@@ -51,6 +51,8 @@
 		  success: function(res) {
 			alert(JSON.stringify(res));
 			
+			if(!millie){ alert("millie not loaded!"); return; }
+			
   			setTimeout(function(){ window.millie.closeStage(); }, 3000);
   			
 		  },
