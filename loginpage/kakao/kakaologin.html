@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<a id="kakao-login-btn"></a>
+<a id="kakao-login-btn" href="javascript:loginWithKakao()"></a>
 <a href="http://developers.kakao.com/logout"></a>
 <script type='text/javascript'>
   //<![CDATA[
@@ -20,11 +20,16 @@
       container: '#kakao-login-btn',
       success: function(authObj) {
         alert(JSON.stringify(authObj));
+        Kakao.Auth.setAccessToken(authObj['access_token']);
       },
       fail: function(err) {
          alert(JSON.stringify(err));
       }
     });
+    
+    // 자동 실행
+    document.getElementById('kakao-login-btn').click();
+    
   //]]>
 </script>
 
