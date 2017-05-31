@@ -39,7 +39,7 @@
       Kakao.Auth.login({
         success: function(authObj) {
           alert('Kakao.Auth.login success!');
-          callAPI();
+          callAPI(callAPICallback);
         },
         fail: function(err) {
           alert(JSON.stringify(err));
@@ -47,15 +47,20 @@
       });
     };
     
-    function callAPI(){
+    function callAPICallback(res){
+    	alert("callAPICallback! millie = "+millie);
+    }
+    
+    function callAPI(callback){
     	alert(millie);
     	// 로그인 성공시, API를 호출합니다.
 		Kakao.API.request({
 		  url: '/v1/user/me',
 		  success: function(res) {
+			callback(res);
 			//alert(JSON.stringify(res));			
 			
-  			setTimeout(function(){ window.millie.closeStage(); }, 3000);
+  			//setTimeout(function(){ window.millie.closeStage(); }, 3000);
   			
 		  },
 		  fail: function(error) {
@@ -63,6 +68,8 @@
 		  }
 		});
     }
+    
+    
     
     // 자동 실행
     //document.getElementById('kakao-login-btn').click();
