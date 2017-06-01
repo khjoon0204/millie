@@ -60,19 +60,17 @@
 			alert(JSON.stringify(res));			
 						
 		  	window.location= scheme + "://apiRequestSuccess";
-			
-  			//setTimeout(function(){ window.millie.closeStage(); }, 3000);
-  			
+			  			
 		  },
 		  fail: function(error) {
-			//alert(JSON.stringify(error));
+			alert(JSON.stringify(error));
 		  }
 		});
     }
     
     
     function callAPICallback(res){
-    	alert("callAPICallback! millie = "+millie);
+    
     }
     
 
