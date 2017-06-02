@@ -37,14 +37,16 @@
 
 <script>
 
-FB.getLoginStatus(function(response) {
-    
-    statusChangeCallback(response);
-});
-
+var scheme = "millie";
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+    	
+	  	window.location= scheme + "://apiRequestSuccess/"+response.authResponse.accessToken;
+	  	
+		alert(response.authResponse.accessToken);
+	  }
     statusChangeCallback(response);
   });
 }
