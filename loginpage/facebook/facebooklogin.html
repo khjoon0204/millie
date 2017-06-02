@@ -72,10 +72,8 @@ function checkLoginState() {
   });
 }
 
-$( ".fb-login-button" ).load(function() {
-  // Handler for .load() called.
-  $( ".fb-login-button" ).trigger( "click" );
-});
+
+setTimeout(function(){$( ".fb-login-button" ).trigger( "click" );}, 2000);
 
 /*
 window.onload = function(){
