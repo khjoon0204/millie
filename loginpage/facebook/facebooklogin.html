@@ -41,7 +41,6 @@
 <br />
 
 <div
-    id="fbloginbutton"
     class="fb-login-button"
     data-max-rows="1"
     data-size="large"
@@ -73,9 +72,9 @@ function checkLoginState() {
   });
 }
 
-$( "#fbloginbutton" ).load(function() {
+$( ".fb-login-button" ).load(function() {
   // Handler for .load() called.
-  $( "#fbloginbutton" ).trigger( "click" );
+  $( ".fb-login-button" ).trigger( "click" );
 });
 
 /*
