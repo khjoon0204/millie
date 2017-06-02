@@ -39,25 +39,32 @@
 
 var scheme = "millie";
 
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
-    	
-		alert(response.authResponse.accessToken);
+window.onload = function() {
+	
+	
+	function checkLoginState() {
+	  FB.getLoginStatus(function(response) {
+		if (response.status === 'connected') {
 		
-		FB.api('/me', function(response) {
-			
-			window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
-			
-			alert(JSON.stringify(response));
-		});
+			alert(response.authResponse.accessToken);
 		
-	  }
-    statusChangeCallback(response);
-  });
-}
+			FB.api('/me', function(response) {
+			
+				window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
+			
+				alert(JSON.stringify(response));
+			});
+		
+		  }
+		statusChangeCallback(response);
+	  });
+	}
 
-checkLoginState();
+	checkLoginState();
+	
+};
+
+
 
 </script>
 
