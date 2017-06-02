@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.view.RootController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="118.0" layoutY="152.0" prefHeight="99.0" prefWidth="565.0">
+               <children>
+                  <VBox prefHeight="99.0" prefWidth="442.0">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="302.0">
+                           <children>
+                              <Label maxWidth="-Infinity" minWidth="100.0" prefHeight="60.0" prefWidth="100.0" text="아이디" />
+                              <TextField fx:id="id" prefHeight="61.0" prefWidth="300.0" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="302.0">
+                           <children>
+                              <Label maxWidth="-Infinity" minWidth="100.0" prefHeight="60.0" prefWidth="100.0" text="비밀번호" />
+                              <TextField fx:id="pw" prefHeight="61.0" prefWidth="300.0" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="login" mnemonicParsing="false" onAction="#pressedLogin" prefHeight="99.0" prefWidth="123.0" text="로그인" />
+               </children>
+            </HBox>
+            <VBox layoutX="118.0" layoutY="300.0" prefHeight="152.0" prefWidth="565.0">
+               <children>
+                  <Button fx:id="loginNaver" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressedLoginNaver" prefHeight="50.0" text="네이버로 로그인" />
+                  <Button fx:id="loginKakao" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressedLoginKakao" prefHeight="50.0" text="카카오로 로그인" />
+                  <Button fx:id="loginFacebook" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pressedLoginFacebook" prefHeight="50.0" text="페이스북으로 로그인" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

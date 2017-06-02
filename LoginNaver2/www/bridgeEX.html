@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>JavaFX Bridge EX1</title>
+
+</head>
+<body>
+
+JavaFX Bridge EX1
+
+<script>
+
+  
+/*
+  window.onload = function () {
+      // Check if 'window.enigma' facilities are available, this test WON'T PASS in a regular browser.
+      if (window.millie) {
+    	  alert("millie is ready!");
+    	  millie.closeStage();
+      }
+      else{ alert("millie is not ready!"); }
+
+  }
+*/
+  
+  setTimeout(function(){ closeStage(); }, 3000);
+ 
+	function closeStage(){
+		window.location= "millie://apiRequestSuccess/thisispaht";
+	}
+ 
+	
+	
+</script>
+</body>
+</html>
