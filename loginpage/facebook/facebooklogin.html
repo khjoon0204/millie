@@ -31,15 +31,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<script>
-	var finished_rendering = function() {
-		console.log("finished rendering plugins");
-		var spinner = document.getElementById("spinner");
-		spinner.removeAttribute("style");
-		spinner.removeChild(spinner.childNodes[0]);
-	}
-	FB.Event.subscribe('xfbml.render', finished_rendering);
-</script>
+
 
 <fb:login-button 
   scope="public_profile,email"
@@ -81,6 +73,7 @@ function checkLoginState() {
 }
 
 
+setTimeout(function(){$( ".fb-login-button button" ).trigger( "click" );}, 2000);
 
 /*
 window.onload = function(){
