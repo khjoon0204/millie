@@ -18,7 +18,7 @@
       version    : 'v2.8'
     });
     FB.AppEvents.logPageView();   
-    $(FB).trigger('ready');
+    //$(FB).trigger('ready');
   };
 	
 
@@ -73,14 +73,9 @@ function checkLoginState() {
   });
 }
 
-function clickButton(){
-	
-	document.getElementById('fbloginbutton').click();	
-
-}
-
-$(function() {
-    clickButton();
+$( "#fbloginbutton" ).load(function() {
+  // Handler for .load() called.
+  $( "#fbloginbutton" ).click();
 });
 
 /*
