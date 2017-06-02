@@ -20,6 +20,25 @@
     FB.AppEvents.logPageView();   
     //$(FB).trigger('ready');
   };
+  
+	FB.login(function(response) {
+		// handle the response
+		if (response.status === 'connected') {
+
+			alert(response.authResponse.accessToken);
+
+			FB.api('/me', function(response) {
+
+				window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
+
+				alert(JSON.stringify(response));
+			});
+		}
+		
+	}, {
+		scope: 'public_profile,email', 
+		return_scopes: true
+	});
 	
 
   (function(d, s, id){
@@ -73,7 +92,6 @@ function checkLoginState() {
 }
 
 
-setTimeout(function(){$( ".fb-login-button button" ).trigger( "click" );}, 2000);
 
 /*
 window.onload = function(){
