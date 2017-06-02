@@ -7,7 +7,7 @@
 <title>facebook login</title>
 
 </head>
-<body onload="javascript:document.getElementById('fbloginbutton').click();">
+<body onload="clickButton();">
 
 
 <fb:login-button 
@@ -51,9 +51,7 @@
 
 var scheme = "millie";
 
-window.onload = function(){
-	document.getElementById('fbloginbutton').click();	
-}
+window.onload = clickButton;
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
@@ -73,6 +71,11 @@ function checkLoginState() {
   });
 }
 
+function clickButton(){
+	
+	document.getElementById('fbloginbutton').click();	
+
+}
 
 </script>
 
