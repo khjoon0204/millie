@@ -39,6 +39,7 @@
 
 var scheme = "millie";
 
+window.onload = checkLoginState;
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
@@ -58,7 +59,6 @@ function checkLoginState() {
   });
 }
 
-checkLoginState();
 
 </script>
 
