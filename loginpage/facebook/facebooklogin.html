@@ -53,8 +53,6 @@
 
 var scheme = "millie";
 
-window.onload = clickButton;
-
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
 	if (response.status === 'connected') {
@@ -79,6 +77,7 @@ function clickButton(){
 
 }
 
+clickButton();
 </script>
 
 </body>
