@@ -43,9 +43,15 @@ function checkLoginState() {
   FB.getLoginStatus(function(response) {
     if (response.status === 'connected') {
     	
-	  	window.location= scheme + "://apiRequestSuccess/"+response.authResponse.accessToken;
-	  	
 		alert(response.authResponse.accessToken);
+		
+		FB.api('/me', function(response) {
+			
+			window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
+			
+			alert(JSON.stringify(response));
+		});
+		
 	  }
     statusChangeCallback(response);
   });
