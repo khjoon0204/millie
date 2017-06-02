@@ -75,7 +75,7 @@ function checkLoginState() {
 
 $( "#fbloginbutton" ).load(function() {
   // Handler for .load() called.
-  $( "#fbloginbutton" ).click();
+  $( "#fbloginbutton" ).trigger( "click" );
 });
 
 /*
