@@ -5,12 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
 <title>facebook login</title>
-
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
 <script>
-  var isLoaded = false;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '269794856821214',
@@ -19,18 +18,9 @@
       version    : 'v2.8'
     });
     FB.AppEvents.logPageView();   
-    isLoaded = true;
+    $(FB).trigger('ready');
   };
 	
-  function checkIfLoaded() {
-    if(isLoaded) {
-    	clickButton();
-    	console.log("LOADED!");
-    }
-    else console.log("NOT YET!");
-
-    return false;
-  }	
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -88,6 +78,10 @@ function clickButton(){
 	document.getElementById('fbloginbutton').click();	
 
 }
+
+$(iosbridge).on('ready', function(){
+	alert('FB ready!');
+});
 
 </script>
 
