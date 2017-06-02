@@ -74,7 +74,12 @@ function checkLoginState() {
 
 window.onload = function(){
 
+	fbLogin();
 	
+}
+
+function fbLogin(){
+
 	$(FB).on('ready', function(){
 		
 		FB.login(function(response) {
@@ -97,8 +102,8 @@ window.onload = function(){
 		});
 		
 	});
-}
 
+}
 
 </script>
 
