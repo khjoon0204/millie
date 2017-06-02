@@ -20,8 +20,6 @@
     FB.AppEvents.logPageView();   
     $(FB).trigger('ready');
   };
-  
-	
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -73,40 +71,34 @@ function checkLoginState() {
   });
 }
 
-$(FB).on('ready', function(){
 
-	
-	FB.login(function(response) {
-		// handle the response
-		if (response.status === 'connected') {
-
-			alert(response.authResponse.accessToken);
-
-			FB.api('/me', function(response) {
-
-				window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
-
-				alert(JSON.stringify(response));
-			});
-		}
-		
-	}, {
-		scope: 'public_profile,email', 
-		return_scopes: true
-	});
-
-});
-
-/*
 window.onload = function(){
 
 	
 	$(FB).on('ready', function(){
-		alert('FB ready!');
+		
+		FB.login(function(response) {
+			// handle the response
+			if (response.status === 'connected') {
+
+				alert(response.authResponse.accessToken);
+
+				FB.api('/me', function(response) {
+
+					window.location= scheme + "://apiRequestSuccess/"+JSON.stringify(response);
+
+					alert(JSON.stringify(response));
+				});
+			}
+		
+		}, {
+			scope: 'public_profile,email', 
+			return_scopes: true
+		});
 		
 	});
 }
-*/
+
 
 </script>
 
